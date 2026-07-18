@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EEE Wayfinder - Dept. of Electrical &amp; Electronics Engineering, AITAM</title>
+<meta name="description" content="Find any faculty cabin, lab, or classroom in the AITAM EEE department - search by name, room number, or lab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="apple-touch-icon" href="logo.jpg">
+<meta name="theme-color" content="#14213D">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <img class="brand-logo" src="aitam-logo.png" alt="AITAM logo">
+    <div class="brand-text">
+      <span class="eyebrow-mini">EEE Department Directory</span>
+      <span class="dept">EEE WayFinder</span>
+      <span class="college">Dept. of Electrical &amp; Electronics Engineering · AITAM</span>
+    </div>
+    <img class="jubilee-badge" src="silver-jubilee-badge.png" alt="AITAM Silver Jubilee - 25 years">
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">Department Directory</span>
+      <h1>Find any cabin, lab, or classroom - <em>without asking around.</em></h1>
+      <p class="lede">Type a room number, a lab name, or a faculty member's name. We'll show you exactly where it is and how to get there.</p>
+
+      <div class="search-shell">
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="searchInput" type="text" autocomplete="off" spellcheck="false"
+                 placeholder="Try &quot;FF-11&quot;, &quot;Power Systems Lab&quot;, or a faculty name..." aria-label="Search rooms, labs, and faculty">
+          <button class="search-clear" id="searchClear" aria-label="Clear search">x</button>
+        </div>
+        <div class="suggestions" id="suggestions" role="listbox"></div>
+      </div>
+
+      <div class="stat-strip">
+        <div class="stat"><b id="statFaculty">-</b><span>Faculty listed</span></div>
+        <div class="stat"><b id="statRooms">-</b><span>Rooms mapped</span></div>
+        <div class="stat"><b id="statFloors">-</b><span>Floors covered</span></div>
+      </div>
+    </div>
+
+    <div class="building-card">
+      <span class="building-tag">C BLOCK · EEE</span>
+      <img src="EEE_Block.jpeg" alt="Front entrance of the C Block building, home to the Department of Electrical and Electronics Engineering at AITAM" loading="eager">
+      <div class="building-plate">
+        <div class="plate-eyebrow">You are here</div>
+        <h3>Dept. of Electrical &amp; Electronics Engineering</h3>
+        <p>This is the building the directory below maps, floor by floor, room by room.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Browse by faculty</h2>
+      <span class="hint">Tap a face to see their cabin and how to reach it</span>
+    </div>
+    <div class="faculty-grid" id="facultyGrid"></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Browse by floor</h2>
+      <span class="hint">Every room, lab, and classroom, in corridor order</span>
+    </div>
+
+    <div class="floor-deck">
+      <span class="deck-label">Select a floor</span>
+      <div class="lift-panel" id="liftPanel"></div>
+      <div>
+        <div class="floor-name" id="floorName">Ground Floor</div>
+        <div class="floor-count" id="floorCount"></div>
+      </div>
+    </div>
+
+    <div class="directory-board">
+      <div class="board-inner" id="directoryBoard"></div>
+    </div>
+
+    <div class="legend" id="legend"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand"><span class="dot"></span> EEE WayFinder</div>
+    <div class="foot-meta">Department of Electrical &amp; Electronics Engineering · Aditya Institute of Technology and Management (AITAM) · Autonomous, NAAC A+, NBA Accredited</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="detail-card" id="detailCard" role="dialog" aria-modal="true"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
