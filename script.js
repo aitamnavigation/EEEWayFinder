@@ -230,7 +230,7 @@
     ],
     "GF-08": [
       { src:"entrance.jpg", label:"Take straight-right to see right side Stairs" },
-      { src:"dummy-gf-08-step-2.jpg", label:"Left to the stairs, you can see the BEE/Machines Lab" },
+      { src:"machines.jpg", label:"Left to the stairs, you can see the BEE/Machines Lab" },
     ],
     "GF-09": [
       { src:"entrance.jpg", label:"Take immediate right to see right side Stairs" },
