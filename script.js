@@ -206,15 +206,15 @@
     ],
     "GF-02": [
       { src:"entrance.jpg", label:"Take Immediate left to see right side stairs" },
-      { src:"dummy-gf-02-step-2.jpg", label:"Here you can see the BEE/ECT Lab" },
+      { src:"bee-1.jpg", label:"Here you can see the BEE/ECT Lab" },
     ],
     "GF-03": [
       { src:"entrance.jpg", label:"Take Immediate left to see right side stairs" },
-      { src:"dummy-gf-02-step-2.jpg", label:"Here you can see the BEE/ECT Lab" },
+      { src:"bee-2.jpg", label:"Here you can see the BEE/ECT Lab" },
     ],
     "GF-04": [
       { src:"entrance.jpg", label:"Take Immediate left to see right side stairs" },
-      { src:"LSS_SH.jpg", label:"Here rigt side od stairs you can see the Seminar Hall" },
+      { src:"LSS_SH.jpg", label:"Here right side of stairs you can see the Seminar Hall" },
     ],
     "GF-05": [
       { src:"entrance.jpg", label:"Take straight way to see the Store Room" },
